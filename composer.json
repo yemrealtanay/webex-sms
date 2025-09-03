@@ -1,0 +1,26 @@
+{
+  "name": "altanay/webex-sms",
+  "description": "Webex Interact SMS for Laravel",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Altanay\\WebexSms\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^10.0|^11.0",
+    "guzzlehttp/guzzle": "^7.8"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Altanay\\WebexSms\\WebexSmsServiceProvider"
+      ],
+      "aliases": {
+        "WebexSms": "Altanay\\WebexSms\\Facades\\WebexSms"
+      }
+    }
+  }
+}
