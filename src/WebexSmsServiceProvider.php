@@ -19,5 +19,9 @@ class WebexSmsServiceProvider extends ServiceProvider
         ], 'webex-sms-config');
 
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
+
+        $this->app->singleton('altanay.webex-sms', function() {
+            return new \Altanay\WebexSms\Services\Client();
+        });
     }
 }
